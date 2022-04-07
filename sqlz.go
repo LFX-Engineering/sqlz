@@ -372,9 +372,24 @@ func GteAll(arr interface{}, value interface{}) ArrayCondition {
 	return ArrayCondition{value, ">=", "ALL", arr}
 }
 
+// LikeIn creates an "Like IN" condition on an array
+func LikeIn(arr interface{}, value interface{}) ArrayCondition {
+	return ArrayCondition{value, "LIKE", "In", arr}
+}
+
+// ILikeIn creates an "ILike IN" condition on an array
+func ILikeIn(arr interface{}, value interface{}) ArrayCondition {
+	return ArrayCondition{value, "ILIKE", "In", arr}
+}
+
 // LikeAny creates an "Like ANY" condition on an array
 func LikeAny(arr interface{}, value interface{}) ArrayCondition {
 	return ArrayCondition{value, "LIKE", "ANY", arr}
+}
+
+// ILikeAny creates an "ILike ANY" condition on an array
+func ILikeAny(arr interface{}, value interface{}) ArrayCondition {
+	return ArrayCondition{value, "ILIKE", "ANY", arr}
 }
 
 func NotLikeAll(arr interface{}, value interface{}) ArrayCondition {
