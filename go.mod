@@ -1,4 +1,4 @@
-module github.com/ido50/sqlz
+module github.com/LF-Engineering/sqlz
 
 go 1.15
 
